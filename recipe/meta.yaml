@@ -24,6 +24,7 @@ requirements:
     - twine
     - pip
   run:
+    - boltons
     - cartopy
     - click !=8.1.0
     - dataretrieval
