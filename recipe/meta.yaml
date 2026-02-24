@@ -30,7 +30,7 @@ requirements:
     - contextily
     - epiweeks4cf
     - filelock
-    - flopy
+    - flopy[codegen]
     - folium
     - geopandas
     - geoviews
