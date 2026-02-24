@@ -12,9 +12,7 @@ source:
 
 build:
   noarch: python
-  script: |
-    {{ PYTHON }} -m pip install . -vv
-    {{ PYTHON }} -m pip install tomli-w --no-deps
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
@@ -62,7 +60,6 @@ requirements:
     - pytest-order
     - pytest-xdist
     - python >={{ python_min }},<3.12
-    - pip
     - pyyaml
     - ruff
     - shapely
