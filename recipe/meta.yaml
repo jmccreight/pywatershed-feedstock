@@ -12,7 +12,9 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: |
+    {{ PYTHON }} -m pip install . -vv
+    {{ PYTHON }} -m pip install tomli_w --no-deps
   number: 0
 
 requirements:
@@ -24,13 +26,14 @@ requirements:
     - twine
     - pip
   run:
+    - boltons
     - cartopy
     - click !=8.1.0
     - dataretrieval
     - contextily
     - epiweeks4cf
     - filelock
-    - flopy[codegen]
+    - flopy
     - folium
     - geopandas
     - geoviews
@@ -59,6 +62,7 @@ requirements:
     - pytest-order
     - pytest-xdist
     - python >={{ python_min }},<3.12
+    - pip
     - pyyaml
     - ruff
     - shapely
