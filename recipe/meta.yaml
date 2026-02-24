@@ -14,7 +14,7 @@ build:
   noarch: python
   script: |
     {{ PYTHON }} -m pip install . -vv
-    {{ PYTHON }} -m pip install tomli_w --no-deps
+    {{ PYTHON }} -m pip install tomli-w --no-deps
   number: 0
 
 requirements:
