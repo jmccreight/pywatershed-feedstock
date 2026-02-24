@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "pywatershed" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywatershed-{{ version }}.tar.gz
-  sha256: 334b69f88fd876858125358d1bf96550d17867332001e98d3dbb1f3171e032db
+  sha256: 78e32b7487030a7edf56aa1c25fe902fb73ad62ad393ed5cfe2e6b3f8e4b46b5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
