@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.12" %}
 {% set name = "pywatershed" %}
 {% set version = "3.0.0" %}
 
@@ -59,7 +59,7 @@ requirements:
     - pytest-env
     - pytest-order
     - pytest-xdist
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<3.14
     - pyyaml
     - ruff
     - shapely
