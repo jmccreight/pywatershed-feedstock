@@ -18,59 +18,35 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
-    - importlib-metadata
-    - numpy
-    - twine
+    - setuptools >64
+    - numpy >=2.0
     - pip
   run:
-    - boltons
-    - cartopy
-    - click !=8.1.0
-    - dataretrieval
+    - python >={{ python_min }},<3.14
     - contextily
+    # conda-forge package providing the epiweeks distribution
     - epiweeks4cf
-    - filelock
+    # flopy plus the contents of its pip "codegen" extra
+    # (pywatershed requires flopy[codegen]; pip check enforces the
+    # extra's dependencies)
     - flopy
-    - folium
+    - boltons
+    - jinja2 >=3.0
+    - modflow-devtools >=1.7.0
+    - tomli
+    - tomli-w
     - geopandas
-    - geoviews
-    - git
-    - holoviews
-    - hvplot
-    - ipython
-    - ipywidgets
-    - jupyter
-    - jupyter-black
-    - jupyterlab
-    - matplotlib >=1.4.0
-    - nbconvert
+    - matplotlib-base >=1.4.0
     - netCDF4
     - networkx
-    - numpy >=2.0.0
     - numba
-    - modflow-devtools
+    - numpy >=2.0.0
     - pandas >=1.4.0
     - pint
-    - pip
-    - pre-commit
-    - pydot
-    - pytest !=8.1.0
-    - pytest-cov
-    - pytest-env
-    - pytest-order
-    - pytest-xdist
-    - python >={{ python_min }},<3.14
+    - pyprms
     - pyyaml
-    - ruff
-    - shapely
-    - sphinx
-    - sphinx-book-theme >=0.3.3
-    - sphinx-autodoc-typehints >=2.2.1
-    - sphinx-autosummary-accessors
-    - sphinx-copybutton
     - tqdm
-    - xarray >=2024.06.0
+    - xarray >=2023.5.0
     - xmltodict
     - xyzservices
 
@@ -84,12 +60,12 @@ test:
     - pip
 
 about:
-  home: https://github.com/EC-USGS/pywatershed
+  home: https://github.com/DOI-USGS/pywatershed
   summary: pywatershed is a Python package for hydrologic modeling
   license: CC0-1.0
   license_file: LICENSE
   doc_url: https://pywatershed.readthedocs.io
-  dev_url: https://github.com/EC-USGS/pywatershed
+  dev_url: https://github.com/DOI-USGS/pywatershed
 
 extra:
   recipe-maintainers:
