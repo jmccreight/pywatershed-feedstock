@@ -43,6 +43,7 @@ requirements:
     - jupyter
     - jupyter-black
     - jupyterlab
+    - matplotlib >=1.4.0
     - nbconvert
     - netCDF4
     - networkx
@@ -71,6 +72,7 @@ requirements:
     - tqdm
     - xarray >=2024.06.0
     - xmltodict
+    - xyzservices
 
 test:
   imports:
