@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -43,12 +43,7 @@ requirements:
     - numpy >=2.0.0
     - pandas >=1.4.0
     - pint
-    - pyprms
-    # TEMPORARY: pyPRMS 0.9.10 MetaData crashes with packaging >=26.3
-    # (its `except TypeError` misses the new InvalidVersion raised by
-    # Version(None)). Remove when pyPRMS releases a fix and this recipe
-    # can require that version.
-    - packaging <26.3
+    - pyprms >=0.10.0
     - pyyaml
     - tqdm
     - xarray >=2023.5.0
